@@ -31,7 +31,7 @@ public class PlayerControl : MonoBehaviour
             // 必選修
             e = 1;
         }
-        else if (pPoint == 3 || pPoint == 14 || pPoint == 33 )
+        else if (pPoint == 3 || pPoint == 14 || pPoint == 33)
         {
             // 機會
             e = 2;
