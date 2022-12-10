@@ -1,21 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
 
     private static GameObject player;
+
     public static int diceThrown = 0;
     public int nowEvent;
-    public Dialoge dialoge;
-    
+    public Dialoge dialoge; // dialoge 匡中的圖片
+
+    public ChaDatabase chaDatabase; 
+
+    public SpriteRenderer spriteRenderer; // 腳色的圖片
+    public TextMeshProUGUI characterName; // 角色的名字
+    private int nowPick = 0;  // 選到哪一個角色
+
     public static int playerStartPoint = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Unknown");
         player.GetComponent<MovePlayer>().moveallow = false;
+
+        if (!PlayerPrefs.HasKey("nowPick"))
+        {
+            nowPick = 0;
+        }
+        else
+        {
+            load();
+        }
+        updateCha(nowPick);
+    }
+    private void updateCha(int select)
+    {
+        Character character = chaDatabase.GetCharacter(select);
+        characterName.text = character.characterName;
+        spriteRenderer.sprite = character.character;
+    }
+    private void load()
+    {
+        nowPick = PlayerPrefs.GetInt("nowPick");
     }
 
     int checkEvent(int pPoint)
