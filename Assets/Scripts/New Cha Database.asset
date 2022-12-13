@@ -16,6 +16,6 @@ MonoBehaviour:
   - characterName: anya
     character: {fileID: 21300000, guid: 3a0ef56b271b04cf598893c640e019ac, type: 3}
   - characterName: anya2
-    character: {fileID: 21300000, guid: d1a7887a3e81343bfb87fafe98cd5596, type: 3}
+    character: {fileID: 21300000, guid: 2b27f116f087c4985b04f479abc79963, type: 3}
   - characterName: meow
     character: {fileID: 21300000, guid: a10fed873afa34517ad57db63d2795e2, type: 3}
