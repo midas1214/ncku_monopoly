@@ -60,7 +60,7 @@ public class SelectCha : MonoBehaviour
 
     public void startGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     private void load()
