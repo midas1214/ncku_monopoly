@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Unknown");
+        player = GameObject.Find("Player");
         player.GetComponent<MovePlayer>().moveallow = false;
 
         if (!PlayerPrefs.HasKey("nowPick"))
