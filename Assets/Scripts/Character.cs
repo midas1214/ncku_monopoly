@@ -7,4 +7,6 @@ public class Character
 {
     public string characterName;
     public Sprite character;
+    public int credit;
+    public int money;
 }
