@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: EventData
   m_EditorClassIdentifier: 
   _event:
-  - eventInfo: "\u64BF\u5230\u9322"
+  - eventInfo: "\u8F49\u89D2\u9047\u898B\u611B\uFF0C\u539F\u4F86\u662F\u7CFBk\u5730\u7E1B\u9748
+      \u5B78\u5206-1"
+    val: -1
+    eventType: 1
+  - eventInfo: "\u6C7A\u5B9A\u4E0D\u5403\u5BBF\u71DF\u6176\u529F\u5BB4\uFF0C\u7701\u4E0B1000"
     val: 1000
     eventType: 0
-  - eventInfo: "\u88AB\u7576"
-    val: -3
-    eventType: 1
+  - eventInfo: "\u4E16\u8DB3\u8CFD\u8CB72000\u5143\u5DF4\u897F\u8D0F\u514B\u7F85\u57C3\u897F\u4E9E\u7684\u904B\u5F69"
+    val: -2000
+    eventType: 0
