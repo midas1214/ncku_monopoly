@@ -110,8 +110,12 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<MovePlayer>().waypointIndex > playerStartPoint + diceThrown) //走到指定點了
+        if (player.GetComponent<MovePlayer>().waypointIndex > playerStartPoint + diceThrown - player.GetComponent<MovePlayer>().nextLap * player.GetComponent<MovePlayer>().waypoints.Length) //走到指定點了
         {
+            if (player.GetComponent<MovePlayer>().nextLap == 1)
+            {
+                player.GetComponent<MovePlayer>().nextLap = 0;
+            }
             player.GetComponent<MovePlayer>().moveallow = false; //停止走路
             playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
             nowEvent = checkEvent(playerStartPoint);
