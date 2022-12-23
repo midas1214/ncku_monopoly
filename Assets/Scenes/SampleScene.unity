@@ -1013,10 +1013,10 @@ RectTransform:
   - {fileID: 900079178}
   - {fileID: 1570738635}
   - {fileID: 1495688699}
+  - {fileID: 301949088}
   - {fileID: 527762114}
   - {fileID: 1695210536}
   - {fileID: 384090687}
-  - {fileID: 301949088}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1196,7 +1196,7 @@ RectTransform:
   - {fileID: 1480537225}
   - {fileID: 1422416738}
   m_Father: {fileID: 200519060}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1457,7 +1457,7 @@ RectTransform:
   m_Children:
   - {fileID: 1483348164}
   m_Father: {fileID: 200519060}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2222,7 +2222,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200519060}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3872,7 +3872,7 @@ MonoBehaviour:
   questionBox: {fileID: 900079177}
   dialogeBox: {fileID: 979147991}
   correctCol: {r: 0, g: 0.70980394, b: 0, a: 1}
-  wrongCol: {r: 1, g: 0, b: 0, a: 1}
+  wrongCol: {r: 1, g: 0.19339621, b: 0.19339621, a: 1}
   normalCol: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &979147995
 MonoBehaviour:
@@ -5839,8 +5839,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7120,7 +7120,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200519060}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

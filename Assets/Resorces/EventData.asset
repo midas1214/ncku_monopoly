@@ -24,3 +24,38 @@ MonoBehaviour:
       -2000"
     val: -2000
     eventType: 0
+  - eventInfo: "\u5FF5\u8AA0\u76C3\u6296\u97F3\u5927\u8CFD\u7B2C\u4E00\u540D \u5B78\u5206+10"
+    val: 10
+    eventType: 1
+  - eventInfo: "\u88AB\u5FB5\u53EC\u53BB\u5E6B\u7CFB\u9928\u62D4\u8349 \u640D\u5931500"
+    val: -500
+    eventType: 0
+  - eventInfo: "\u8207\u7B4D\u5305\u4E00\u540C\u5275\u5EFA\u8B80\u66F8\u6703 \u5B78\u5206+5"
+    val: 5
+    eventType: 1
+  - eventInfo: "\u53BB\u5955\u7A0B\u5BB6\u5927\u4FBF\u4E0D\u5C0F\u5FC3\u628A\u99AC\u6876\u5835\u4F4F
+      \u640D\u59311000"
+    val: -100
+    eventType: 0
+  - eventInfo: "\u6578\u4F4D\u96FB\u8DEF\u5C0E\u8AD6\u62BD\u5230\u5BE6\u9A57\u7D44
+      \u5B78\u5206+3"
+    val: 3
+    eventType: 1
+  - eventInfo: "\u8DDF\u52A0\u5DDE\u53C3\u52A0 IC \u6BD4\u8CFD\u57F9\u8A13 \u5B78\u5206+3 "
+    val: 3
+    eventType: 1
+  - eventInfo: "\u6253\u6557\u70CF\u9D09\u982D\u982D\uFF0C\u62FF\u5230\u66F8\u5377\u734E
+      \u7372\u5F973000"
+    val: 3000
+    eventType: 0
+  - eventInfo: "\u5728\u5927\u4E8C\u8056\u8A95\u7BC0\u524D\u812B\u9B6F\uFF0C\u671F\u672B\u8003\u66B4\u885D
+      \u5B78\u5206+5"
+    val: 5
+    eventType: 1
+  - eventInfo: "\u53BB\u6708\u8001\u5EDF\u62DC\u62DC \u661F\u8FB0\u54F2\u9748 \u7372\u5F9710\u5B78\u5206"
+    val: 10
+    eventType: 1
+  - eventInfo: "\u63E1\u5230\u8521\u5927\u54E5\u7684\u795E\u4E4B\u624B\uFF0C\u7A0B\u8A2D\u4E00\u7834\u53F0
+      \u5B78\u5206+3"
+    val: 3
+    eventType: 1

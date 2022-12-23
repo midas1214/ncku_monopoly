@@ -15,7 +15,7 @@ public class selectCardUi : MonoBehaviour
     [SerializeField] private PlayerControl player;
     List<int> resultList;
     private List<int> addMoney = new List<int>() { 1000, 3000, 6000, 0 };
-    private List<int> cutMoney = new List<int>() { -1000, -3000, -500, -1500 };
+    private List<int> cutMoney = new List<int>() { -1000, -2000, -500, -1500 };
 
     private void Awake()
     {
@@ -49,6 +49,7 @@ public class selectCardUi : MonoBehaviour
     {
         result.text = "";
     }
+
     void UpdateState()
     {
         player.moneyText.text = player.money.ToString();
@@ -81,7 +82,6 @@ public class selectCardUi : MonoBehaviour
         result.text = "";
         for (int i = 0; i < options.Count; i++)
         {
-        
             options[i].GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
 

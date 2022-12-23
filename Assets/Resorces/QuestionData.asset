@@ -22,11 +22,11 @@ MonoBehaviour:
     questionType: 2
   - questionInfo: "\u8ACB\u554F\u6210\u5927\u4E00\u5171\u6709\u5E7E\u500B\u6821\u5340\uFF1F"
     options:
-    - 6
     - 7
-    - 8
-    correctAns: 7
-    questionType: 1
+    - 9
+    - 11
+    correctAns: 11
+    questionType: 0
   - questionInfo: "\u8ACB\u554F\u4EE5\u4E0B\u6559\u6388\u540D\u5B57\u4F55\u8005\u6B63\u78BA\uFF1F"
     options:
     - "\u8607\u868A\u828B\u6559\u6388"
@@ -104,7 +104,7 @@ MonoBehaviour:
     - "\u8B1D\u5B6B\u6E90\u6559\u6388"
     correctAns: "\u8B1D\u5B6B\u6E90\u6559\u6388"
     questionType: 2
-  - questionInfo: "\u4E0B\u5217\u54EA\u4E00\u4F4D\u6559\u6388\u6C92\u6709\u64D4\u4EFB\u904E\u8CC7\u8A0A\u7CFB\u4E3B\u4EFB\uFF1F"
+  - questionInfo: "\u8ACB\u554F\u4E0B\u5217\u54EA\u4E00\u4F4D\u6559\u6388\u6C92\u6709\u64D4\u4EFB\u904E\u8CC7\u8A0A\u7CFB\u4E3B\u4EFB\uFF1F"
     options:
     - "\u9673\u57F9\u6BB7\u6559\u6388"
     - "\u8607\u6587\u923A\u6559\u6388"
@@ -125,3 +125,80 @@ MonoBehaviour:
     - "\u4E09\u500B"
     correctAns: "\u4E8C\u500B "
     questionType: 1
+  - questionInfo: "\u8ACB\u554F\u4E0B\u5217\u5B78\u6821\u54EA\u500B\u6821\u5730\u9762\u7A4D\u6700\u5927\uFF1F"
+    options:
+    - "\u6210\u529F\u5927\u5B78"
+    - "\u53F0\u7063\u5927\u5B78"
+    - "\u6E05\u83EF\u5927\u5B78"
+    correctAns: "\u6210\u529F\u5927\u5B78"
+    questionType: 0
+  - questionInfo: "\u8ACB\u554F\u6B64\u904A\u6232\u7684\u540D\u5B57\uFF1F"
+    options:
+    - "\u6210\u5927\u7AAE\u7FC1"
+    - "\u53F0\u5927\u5BCC\u7FC1"
+    - "\u6210\u5927\u5BCC\u7FC1"
+    correctAns: "\u6210\u5927\u5BCC\u7FC1"
+    questionType: 1
+  - questionInfo: "\u8ACB\u554F\u8AB0\u4E0D\u662F\u6B64\u904A\u6232\u7684\u4F5C\u8005\uFF1F"
+    options:
+    - "\u6797\u5FD7\u73B2"
+    - "\u856D\u923A\u84C1"
+    - "\u718A\u8CAB\u4EF2"
+    correctAns: "\u6797\u5FD7\u73B2"
+    questionType: 1
+  - questionInfo: "\u8ACB\u554F\u8996\u7A97\u7A0B\u5F0F\u8A2D\u8A08\u5728\u54EA\u9593\u6559\u5BA4\u5BE6\u9AD4\u4E0A\u8AB2\uFF1F"
+    options:
+    - 65403
+    - 65304
+    - 65405
+    correctAns: 65304
+    questionType: 3
+  - questionInfo: "\u8ACB\u554F\u54ED\u54ED\u9945\u982D\u8981\u50F9\u591A\u5C11\uFF1F"
+    options:
+    - 200
+    - 100
+    - 20
+    correctAns: 100
+    questionType: 3
+  - questionInfo: "\u8ACB\u554F\u4E0B\u5217\u7BA1\u9053\u4F55\u8005\u7121\u6CD5\u53D6\u5F97\u878D\u5408\u901A\u8B58\u9EDE\u6578\uFF1F"
+    options:
+    - "\u9818\u5C0E\u793E\u5718"
+    - "\u7D93\u5178\u95B1\u8B80"
+    - "\u5C08\u984C\u767C\u8868"
+    correctAns: "\u5C08\u984C\u767C\u8868"
+    questionType: 1
+  - questionInfo: "\u8ACB\u554F\u8AB0\u662F\u7CFB\u5B78\u6703\u6703\u9577\uFF1F"
+    options:
+    - "\u738B\u7965\u52DD"
+    - "\u738B\u60F3\u8272"
+    - "\u738B\u7FD4\u8056"
+    correctAns: "\u738B\u7FD4\u8056"
+    questionType: 2
+  - questionInfo: "\u8ACB\u554F\u8AB0\u662F\u8CC7\u8A0A\u7CFB\u7CFB\u8349\uFF1F"
+    options:
+    - "\u963F\u718A"
+    - "\u70CF\u9D09\u982D\u982D"
+    - "\u7B4D\u5305"
+    correctAns: "\u963F\u718A"
+    questionType: 2
+  - questionInfo: "\u8ACB\u554F\u4E0B\u5217\u4F55\u8005\u4E0D\u662F\u80B2\u6A02\u8857\u7684\u5E97\uFF1F"
+    options:
+    - Yes87
+    - "10\u865F\u7F8E\u98DF\u9928"
+    - "123\u88E1\u9762\u5750"
+    correctAns: Yes87
+    questionType: 1
+  - questionInfo: "\u8ACB\u554F\u4E0B\u5217\u4F55\u8005\u4E0D\u662F\u4E00\u7A2E\u8CC7\u6599\u7D50\u69CB\uFF1F"
+    options:
+    - tree
+    - graph
+    - sort
+    correctAns: sort
+    questionType: 2
+  - questionInfo: "\u8ACB\u554Fquick sort \u7684 worst case \u6642\u9593\u8907\u96DC\u5EA6\uFF1F"
+    options:
+    - O(n)
+    - "O(n\xB2)"
+    - 'O(nlogn) '
+    correctAns: "O(n\xB2)"
+    questionType: 3
