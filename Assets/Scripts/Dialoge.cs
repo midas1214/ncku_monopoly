@@ -10,6 +10,7 @@ public class Dialoge : MonoBehaviour
     [SerializeField] private EventManager eventManager;
     [SerializeField] private GameObject questionBox;
     [SerializeField] private GameObject eventBox;
+    [SerializeField] private GameObject shopBox;
 
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class Dialoge : MonoBehaviour
     {
         questionBox.SetActive(false);
         eventBox.SetActive(false);
+        shopBox.SetActive(false);
     }
 
     public void setDialoge(int e)
@@ -57,6 +59,7 @@ public class Dialoge : MonoBehaviour
                 break;
             case 8:
                 nowEvent.text = "商店";
+                shopBox.SetActive(true);
                 break;
 
 
@@ -67,6 +70,7 @@ public class Dialoge : MonoBehaviour
     {
         questionBox.SetActive(false);
         eventBox.SetActive(false);
+        shopBox.SetActive(false);
         nowEvent.text = "";
     }
 

@@ -11,7 +11,8 @@ public class BackpackButtonClick : MonoBehaviour, IPointerClickHandler
     // Start is called before the first frame update
     void Start()
     {
-        backpack = GameObject.Find("Backpack");
+        //backpack = GameObject.Find("Backpack");
+        backpack.SetActive(false);
     }
 
     // Update is called once per frame

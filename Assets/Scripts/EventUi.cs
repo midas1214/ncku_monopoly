@@ -27,7 +27,7 @@ public class EventUi : MonoBehaviour
     private void OnClick(Button btn)
     {
         
-        StartCoroutine(Delay(1.5f));
+        StartCoroutine(Delay(1f));
        
     }
     IEnumerator Delay(float _delay = 0)
