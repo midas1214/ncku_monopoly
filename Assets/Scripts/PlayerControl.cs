@@ -22,6 +22,9 @@ public class PlayerControl : MonoBehaviour
 
     public int credit;
     public int money;
+    public int cheat = 0;
+    public int tainanCredit =0 ;
+    public int diceControl =0 ;
 
     public static int playerStartPoint = 0;
     

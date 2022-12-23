@@ -22,6 +22,6 @@ MonoBehaviour:
     credit: 0
     money: 40000
   - characterName: "\u9EC3\u660F"
-    character: {fileID: 21300000, guid: a10fed873afa34517ad57db63d2795e2, type: 3}
+    character: {fileID: 21300000, guid: 921fb9ae5f67d464b9e3f0b56f248f53, type: 3}
     credit: 10
     money: 40000

@@ -8,6 +8,9 @@ public class BackpackButtonClick : MonoBehaviour, IPointerClickHandler
 {
     public GameObject backpack;
     public bool backpackShow = false;
+    [SerializeField]
+    private PlayerControl player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class BackpackButtonClick : MonoBehaviour, IPointerClickHandler
         if (backpackShow)
         {
             backpackShow = false;
+            player.GetComponent<BackpackManager>().UpdateState();
         }
         else
         {
