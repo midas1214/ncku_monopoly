@@ -8,9 +8,11 @@ public class Dialoge : MonoBehaviour
     [SerializeField] public TextMeshProUGUI nowEvent;
     [SerializeField] private QuizManager quizManager;
     [SerializeField] private EventManager eventManager;
+    [SerializeField] private selectCardUi selectCardUi;
     [SerializeField] private GameObject questionBox;
     [SerializeField] private GameObject eventBox;
     [SerializeField] private GameObject shopBox;
+    [SerializeField] private GameObject selectCardBox;
 
 
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class Dialoge : MonoBehaviour
         questionBox.SetActive(false);
         eventBox.SetActive(false);
         shopBox.SetActive(false);
+        selectCardBox.SetActive(false);
     }
 
     public void setDialoge(int e)
@@ -47,9 +50,13 @@ public class Dialoge : MonoBehaviour
                 break;
             case 4:
                 nowEvent.text = "扣錢";
+                selectCardBox.SetActive(true);
+                selectCardUi.SetCard(2);
                 break;
             case 5:
                 nowEvent.text = "加錢";
+                selectCardBox.SetActive(true);
+                selectCardUi.SetCard(1);
                 break;
             case 6:
                 nowEvent.text = "成大醫院";
@@ -71,6 +78,7 @@ public class Dialoge : MonoBehaviour
         questionBox.SetActive(false);
         eventBox.SetActive(false);
         shopBox.SetActive(false);
+        selectCardBox.SetActive(false);
         nowEvent.text = "";
     }
 
