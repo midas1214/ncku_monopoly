@@ -121,7 +121,6 @@ public class PlayerControl : MonoBehaviour
             nowEvent = checkEvent(playerStartPoint);
             dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
         }
-
     }
 
     public static void MovePlayer()
