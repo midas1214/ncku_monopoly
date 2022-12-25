@@ -11,7 +11,7 @@ public class QuizUi : MonoBehaviour
     [SerializeField] private List<Button> options;
     [SerializeField] private GameObject questionBox;
     [SerializeField] private Dialoge dialogeBox;
-    [SerializeField] private Color correctCol, wrongCol, normalCol;
+    [SerializeField] private Color correctCol, wrongCol, normalCol,hintCol;
     private Question question;
     private bool answered;
 
@@ -40,11 +40,18 @@ public class QuizUi : MonoBehaviour
         answered = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void hintUi(Question question)
     {
-        
+        this.question = question;
+        for (int i = 0; i < options.Count; i++)
+        {
+            if (options[i].name == question.correctAns)
+            {
+                options[i].image.color = hintCol;
+            }
+        }
     }
+
     private void OnClick(Button btn)
     {
         if (!answered)

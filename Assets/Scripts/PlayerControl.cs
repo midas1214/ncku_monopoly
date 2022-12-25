@@ -20,11 +20,14 @@ public class PlayerControl : MonoBehaviour
     public TextMeshProUGUI moneyText;
     private int nowPick = 0;  // 選到哪一個角色
 
+    // 持有道具數量
     public int credit;
     public int money;
     public int cheat = 0;
     public int tainanCredit =0 ;
     public int diceControl =0 ;
+    public bool usingTool = false; // 是否裝備道具
+    public int nowUsingTool = 0;
 
     public static int playerStartPoint = 0;
     
@@ -33,7 +36,7 @@ public class PlayerControl : MonoBehaviour
     {
         player = GameObject.Find("GameControl");
         player.GetComponent<MovePlayer>().moveallow = false;
-
+        
         if (!PlayerPrefs.HasKey("nowPick"))
         {
             nowPick = 0;

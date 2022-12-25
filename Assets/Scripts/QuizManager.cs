@@ -19,11 +19,17 @@ public class QuizManager : MonoBehaviour
         //SelectQuestion();
     }
 
-    public void SelectQuestion()
+    public void SelectQuestion(bool usingTool)
     {
         int val = Random.Range(0,questions.Count);
         selectedQuestion = questions[val];
         quizUi.SetQuestion(selectedQuestion);
+        if (usingTool)
+        {
+            quizUi.hintUi(selectedQuestion);
+        }
+        
+       
     }
     public bool Answer(string answered)
     {
@@ -43,7 +49,7 @@ public class QuizManager : MonoBehaviour
         return correctAns;
     }
 
-    void UpdateState()
+    public void UpdateState()
     {
         player.creditText.text = player.credit.ToString();
         player.moneyText.text = player.money.ToString();

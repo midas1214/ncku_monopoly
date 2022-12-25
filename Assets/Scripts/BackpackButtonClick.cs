@@ -18,21 +18,19 @@ public class BackpackButtonClick : MonoBehaviour, IPointerClickHandler
         backpack.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        backpack.SetActive(backpackShow);
-    }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (backpackShow)
         {
             backpackShow = false;
+            backpack.SetActive(false);
             player.GetComponent<BackpackManager>().UpdateState();
         }
         else
         {
             backpackShow = true;
+            backpack.SetActive(backpackShow);
+
         }
     }
 }

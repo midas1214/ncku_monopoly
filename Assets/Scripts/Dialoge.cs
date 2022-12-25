@@ -14,6 +14,9 @@ public class Dialoge : MonoBehaviour
     [SerializeField] private GameObject shopBox;
     [SerializeField] private GameObject selectCardBox;
 
+    [SerializeField]
+    private PlayerControl player;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +32,37 @@ public class Dialoge : MonoBehaviour
         switch (e)
         {
             case 0:
-                nowEvent.text = "通識";
+                
                 questionBox.SetActive(true);
-                quizManager.SelectQuestion();
+                if (player.usingTool == true && player.nowUsingTool == 0) 
+                {
+                    nowEvent.text = "通識   正在使用槍手道具";
+                    quizManager.SelectQuestion(true);
+                    player.GetComponent<BackpackManager>().finishUseTool();
+                    player.usingTool = false;
+                }
+                else if (player.usingTool == false)
+                {
+                    nowEvent.text = "通識";
+                    quizManager.SelectQuestion(false);
+                }
+                
                 break;
             case 1:
-                nowEvent.text = "必選修";
+                
                 questionBox.SetActive(true);
-                quizManager.SelectQuestion();
+                if (player.usingTool == true && player.nowUsingTool ==0) 
+                {
+                    nowEvent.text = "必選修   正在使用槍手道具";
+                    quizManager.SelectQuestion(true);
+                    player.GetComponent<BackpackManager>().finishUseTool();
+                    player.usingTool = false;
+                }
+                else if (player.usingTool == false)
+                {
+                    nowEvent.text = "必選修";
+                    quizManager.SelectQuestion(false);
+                }
                 break;
             case 2:
                 nowEvent.text = "機會";
@@ -49,7 +75,7 @@ public class Dialoge : MonoBehaviour
                 eventManager.SelectEvent();
                 break;
             case 4:
-                nowEvent.text = "扣錢";
+                nowEvent.text = "炸彈";
                 selectCardBox.SetActive(true);
                 selectCardUi.SetCard(2);
                 break;
