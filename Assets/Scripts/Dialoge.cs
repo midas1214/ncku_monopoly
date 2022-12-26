@@ -105,6 +105,9 @@ public class Dialoge : MonoBehaviour
         eventBox.SetActive(false);
         shopBox.SetActive(false);
         selectCardBox.SetActive(false);
+        RollDice.coroutineAllow = true;
+
+        //Cursor.lockState = CursorLockMode.None;
         nowEvent.text = "";
     }
 

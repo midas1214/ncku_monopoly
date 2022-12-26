@@ -118,9 +118,10 @@ public class PlayerControl : MonoBehaviour
     {
         if (player.GetComponent<MovePlayer>().waypointIndex > playerStartPoint + diceThrown - player.GetComponent<MovePlayer>().nextLap * player.GetComponent<MovePlayer>().waypoints.Length) //走到指定點了
         {
-            if (player.GetComponent<MovePlayer>().nextLap == 1)
+            if (player.GetComponent<MovePlayer>().nextLap == 1) // 過一圈
             {
                 player.GetComponent<MovePlayer>().nextLap = 0;
+                money += 2000;
             }
             player.GetComponent<MovePlayer>().moveallow = false; //停止走路
             playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
-
 using UnityEngine.UI;
 using TMPro;
 using System;
@@ -69,8 +68,12 @@ public class selectCardUi : MonoBehaviour
             result.text = "恭喜獲得 " + btn.name + " 元";
         }
         UpdateState();
-        
 
+        options.ForEach(delegate (Button b)
+        {
+            b.onClick.RemoveAllListeners();
+        });
+        //Cursor.lockState = CursorLockMode.Locked;
         StartCoroutine(Delay(1.5f));
     }
 
@@ -79,6 +82,11 @@ public class selectCardUi : MonoBehaviour
         yield return new WaitForSeconds(_delay);
 
         dialogeBox.resetDialogeBox();
+        //Cursor.lockState = CursorLockMode.None;
+        options.ForEach(delegate (Button b)
+        {
+            b.onClick.AddListener(() => OnClick(b));
+        });
         result.text = "";
         for (int i = 0; i < options.Count; i++)
         {

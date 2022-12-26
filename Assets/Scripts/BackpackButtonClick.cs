@@ -30,7 +30,6 @@ public class BackpackButtonClick : MonoBehaviour, IPointerClickHandler
         {
             backpackShow = true;
             backpack.SetActive(backpackShow);
-
         }
     }
 }

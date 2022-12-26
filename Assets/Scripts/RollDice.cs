@@ -6,7 +6,7 @@ public class RollDice : MonoBehaviour
 {
     public Sprite[] diceSprite;
     private SpriteRenderer rend;
-    private bool coroutineAllow = true;
+    public static bool coroutineAllow = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,5 @@ public class RollDice : MonoBehaviour
         }
         PlayerControl.diceThrown = randomSide + 1;
         PlayerControl.MovePlayer();
-        coroutineAllow = true;
     }
 }
