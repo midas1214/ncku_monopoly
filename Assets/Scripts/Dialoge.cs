@@ -86,9 +86,11 @@ public class Dialoge : MonoBehaviour
                 break;
             case 6:
                 nowEvent.text = "成大醫院";
+                resetDialogeBox();
                 break;
             case 7:
                 nowEvent.text = "起點";
+                resetDialogeBox();
                 break;
             case 8:
                 nowEvent.text = "商店";
