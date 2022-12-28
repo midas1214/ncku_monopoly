@@ -61,7 +61,7 @@ public class PurchaseTool : MonoBehaviour
             }
             else
             {
-                info.text = "購買成功";
+                info.text = "購買 小雞上工 成功";
                 player.money -= cheatCost;
                 player.cheat++;
             }
@@ -75,7 +75,7 @@ public class PurchaseTool : MonoBehaviour
             }
             else
             {
-                info.text = "購買成功";
+                info.text = "購買 骰子計數器 成功";
                 player.money -= diceCost;
                 player.diceControl++;
             }
@@ -89,11 +89,12 @@ public class PurchaseTool : MonoBehaviour
             }
             else
             {
-                info.text = "購買成功";
+                info.text = "購買 踏溯台南學分 成功";
                 player.money -= tainanCost;
                 player.tainanCredit++;
             }
         }
         UpdateState() ;
+        player.GetComponent<BackpackManager>().UpdateState();
     }
 }

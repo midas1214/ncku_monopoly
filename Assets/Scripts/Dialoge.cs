@@ -13,6 +13,7 @@ public class Dialoge : MonoBehaviour
     [SerializeField] private GameObject eventBox;
     [SerializeField] private GameObject shopBox;
     [SerializeField] private GameObject selectCardBox;
+    [SerializeField] private GameObject startBox;
 
     [SerializeField]
     private PlayerControl player;
@@ -25,6 +26,7 @@ public class Dialoge : MonoBehaviour
         eventBox.SetActive(false);
         shopBox.SetActive(false);
         selectCardBox.SetActive(false);
+        startBox.SetActive(true);
     }
 
     public void setDialoge(int e)
@@ -90,7 +92,7 @@ public class Dialoge : MonoBehaviour
                 break;
             case 7:
                 nowEvent.text = "起點";
-                resetDialogeBox();
+                startBox.SetActive(true);
                 break;
             case 8:
                 nowEvent.text = "商店";
@@ -107,8 +109,8 @@ public class Dialoge : MonoBehaviour
         eventBox.SetActive(false);
         shopBox.SetActive(false);
         selectCardBox.SetActive(false);
+        startBox.SetActive(false);
         RollDice.coroutineAllow = true;
-
         //Cursor.lockState = CursorLockMode.None;
         nowEvent.text = "";
     }
