@@ -26,6 +26,7 @@ public class BackpackManager : MonoBehaviour
     void Start()
     {
         UpdateState();
+        tainan.text = "尚未完成修課";
         nowTool.enabled = false; // 顯示圖片隱藏
        
     }
@@ -34,7 +35,6 @@ public class BackpackManager : MonoBehaviour
     {
         cheat.text = player.cheat.ToString() + " 個";
         dice.text = player.diceControl.ToString() + " 個";
-        tainan.text = player.tainanCredit.ToString() + " 個";
         pickName.text = "小雞上工";
         info.text = "在答題時使用，將會提示正確答案";
         nowPick = 0;
@@ -79,7 +79,7 @@ public class BackpackManager : MonoBehaviour
        else if (btn.name == "Use")
         {
             if (nowPick == 0 && player.cheat !=0)
-            { 
+            {
                 nowTool.enabled = true;
                 nowTool.sprite = tool[nowPick];
                 player.cheat--;
@@ -98,21 +98,7 @@ public class BackpackManager : MonoBehaviour
                 player.nowUsingTool = nowPick;
 
                 backpack.SetActive(false); UpdateState();
-            }
-            else if (nowPick ==2 && player.tainanCredit !=0)
-            {
-
-                nowTool.enabled = true;
-                nowTool.sprite = tool[nowPick];
-                player.tainanCredit--;
-                player.usingTool = true;
-                player.nowUsingTool = nowPick;
-
-                backpack.SetActive(false); UpdateState();
-            }
-
-           
-            
+            }            
         }
     }
 }

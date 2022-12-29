@@ -35,7 +35,7 @@ MonoBehaviour:
     eventType: 1
   - eventInfo: "\u53BB\u5955\u7A0B\u5BB6\u5927\u4FBF\u4E0D\u5C0F\u5FC3\u628A\u99AC\u6876\u5835\u4F4F
       \u640D\u59311000"
-    val: -100
+    val: -1000
     eventType: 0
   - eventInfo: "\u6578\u4F4D\u96FB\u8DEF\u5C0E\u8AD6\u62BD\u5230\u5BE6\u9A57\u7D44
       \u5B78\u5206+3"

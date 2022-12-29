@@ -87,6 +87,11 @@ public class PurchaseTool : MonoBehaviour
             {
                 info.text = "金額不足";
             }
+            if (player.tainanCredit != 0)
+            {
+                info.text = "該學分已修畢，不得再購買";
+                player.GetComponent<BackpackManager>().tainan.text = "已修畢";
+            }
             else
             {
                 info.text = "購買 踏溯台南學分 成功";
