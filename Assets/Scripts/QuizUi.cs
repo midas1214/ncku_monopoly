@@ -66,7 +66,6 @@ public class QuizUi : MonoBehaviour
             {
                 btn.image.color = wrongCol;
             }
-
             StartCoroutine(Delay(1.5f));
         }
     }
@@ -75,6 +74,5 @@ public class QuizUi : MonoBehaviour
         yield return new WaitForSeconds(_delay);
 
         dialogeBox.resetDialogeBox();
-
     }
 }

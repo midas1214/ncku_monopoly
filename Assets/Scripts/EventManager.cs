@@ -26,10 +26,12 @@ public class EventManager : MonoBehaviour
         if (selectedEvent.eventType == EventType.Money)
         {
             player.money += selectedEvent.val;
+            player.ShowMoneyCreditChange(selectedEvent.val, "money");
         }
         else
         {
             player.credit += selectedEvent.val;
+            player.ShowMoneyCreditChange(selectedEvent.val, "credit");
         }
         UpdateState();
     }

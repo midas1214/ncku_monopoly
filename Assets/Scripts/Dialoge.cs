@@ -26,7 +26,7 @@ public class Dialoge : MonoBehaviour
         eventBox.SetActive(false);
         shopBox.SetActive(false);
         selectCardBox.SetActive(false);
-        startBox.SetActive(true);
+        startBox.SetActive(false);
     }
 
     public void setDialoge(int e)
@@ -98,8 +98,6 @@ public class Dialoge : MonoBehaviour
                 nowEvent.text = "商店";
                 shopBox.SetActive(true);
                 break;
-
-
         }
 
     }

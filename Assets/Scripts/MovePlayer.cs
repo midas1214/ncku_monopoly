@@ -9,6 +9,7 @@ public class MovePlayer : MonoBehaviour
     [HideInInspector] public int waypointIndex = 0;
     public bool moveallow = false;
     public int nextLap = 0;
+    public bool allowPassShop = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class MovePlayer : MonoBehaviour
         {
             waypointIndex -= waypoints.Length;
             nextLap = 1;
+            allowPassShop = true;
         }
 
         transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, speed * Time.deltaTime);
