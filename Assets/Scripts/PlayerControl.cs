@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour
     public TextMeshProUGUI characterName; // 角色的名字
     public TextMeshProUGUI creditText;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI changeCreditText;
+    public TextMeshProUGUI changeMoneyText;
     private int nowPick = 0;  // 選到哪一個角色
 
     // 持有道具數量
@@ -121,18 +123,65 @@ public class PlayerControl : MonoBehaviour
             if (player.GetComponent<MovePlayer>().nextLap == 1) // 過一圈
             {
                 player.GetComponent<MovePlayer>().nextLap = 0;
-                money += 2000;
             }
             player.GetComponent<MovePlayer>().moveallow = false; //停止走路
             playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
             nowEvent = checkEvent(playerStartPoint);
             dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
         }
+        //if ((player.GetComponent<MovePlayer>().waypointIndex == 26) && player.GetComponent<MovePlayer>().allowPassShop) // shop
+        //{
+        //    player.GetComponent<MovePlayer>().allowPassShop = false;
+        //    player.GetComponent<MovePlayer>().moveallow = false; //停止走路
+        //    playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
+        //    nowEvent = checkEvent(playerStartPoint);
+        //    dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
+        //}
     }
 
     public static void MovePlayer()
     {
         player.GetComponent<MovePlayer>().moveallow = true;
+    }
+
+    public void ShowMoneyCreditChange(int change, string type)
+    {
+        switch(type)
+        {
+            case "money":
+                if (change >= 0)
+                {
+                    changeMoneyText.color = new Color(0, 1, 0.6f); // green
+                    changeMoneyText.text = "+" + change.ToString();
+                    StartCoroutine(Delay(changeMoneyText, 3f));
+                }
+                else
+                {
+                    changeMoneyText.color = Color.red;
+                    changeMoneyText.text = change.ToString();
+                    StartCoroutine(Delay(changeMoneyText, 3f));
+                }
+                break;
+            case "credit":
+                if (change >= 0)
+                {
+                    changeCreditText.color = new Color(0, 1, 0.6f);
+                    changeCreditText.text = "+" + change.ToString();
+                    StartCoroutine(Delay(changeCreditText, 3f));
+                }
+                else
+                {
+                    changeCreditText.color = Color.red;
+                    changeCreditText.text = change.ToString();
+                    StartCoroutine(Delay(changeCreditText, 3f));
+                }
+                break;
+        }
+    }
+    IEnumerator Delay(TextMeshProUGUI changeText, float _delay = 0)
+    {
+        yield return new WaitForSeconds(_delay);
+        changeText.text = "";
     }
 }
 

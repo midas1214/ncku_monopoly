@@ -56,8 +56,9 @@ public class selectCardUi : MonoBehaviour
 
     private void OnClick(Button btn)
     {
-       btn.GetComponentInChildren<TextMeshProUGUI>().text = btn.name;
+        btn.GetComponentInChildren<TextMeshProUGUI>().text = btn.name;
         player.money += Int16.Parse(btn.name);
+        player.ShowMoneyCreditChange(Int16.Parse(btn.name), "money");
 
         if (Int16.Parse(btn.name) < 0)
         {

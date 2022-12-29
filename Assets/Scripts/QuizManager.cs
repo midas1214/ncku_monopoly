@@ -28,18 +28,17 @@ public class QuizManager : MonoBehaviour
         {
             quizUi.hintUi(selectedQuestion);
         }
-        
-       
     }
     public bool Answer(string answered)
     {
         bool correctAns = false;
         player.money -= 3000;
+        player.ShowMoneyCreditChange(-3000, "money");
         if (answered == selectedQuestion.correctAns) // yes
         {
             correctAns = true;
             player.credit += 3;
-
+            player.ShowMoneyCreditChange(3, "credit");
         }
         else //no
         {
