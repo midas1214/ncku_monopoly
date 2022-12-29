@@ -165,7 +165,7 @@ public class PlayerControl : MonoBehaviour
             case "credit":
                 if (change >= 0)
                 {
-                    changeCreditText.color = new Color(2, 1, 0.6f);
+                    changeCreditText.color = new Color(0, 1, 0.6f);
                     changeCreditText.text = "+" + change.ToString();
                     StartCoroutine(Delay(changeCreditText, 3f));
                 }
