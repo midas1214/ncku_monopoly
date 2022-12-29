@@ -129,14 +129,14 @@ public class PlayerControl : MonoBehaviour
             nowEvent = checkEvent(playerStartPoint);
             dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
         }
-        //if ((player.GetComponent<MovePlayer>().waypointIndex == 26) && player.GetComponent<MovePlayer>().allowPassShop) // shop
-        //{
-        //    player.GetComponent<MovePlayer>().allowPassShop = false;
-        //    player.GetComponent<MovePlayer>().moveallow = false; //停止走路
-        //    playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
-        //    nowEvent = checkEvent(playerStartPoint);
-        //    dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
-        //}
+        if ((player.GetComponent<MovePlayer>().waypointIndex == 26) && !player.GetComponent<MovePlayer>().allowPassShop) // shop
+        {
+            player.GetComponent<MovePlayer>().allowPassShop = true;
+            player.GetComponent<MovePlayer>().moveallow = false; //停止走路
+            playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
+            nowEvent = checkEvent(playerStartPoint);
+            dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
+        }
     }
 
     public static void MovePlayer()

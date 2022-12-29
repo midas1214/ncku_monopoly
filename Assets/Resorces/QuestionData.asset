@@ -135,7 +135,7 @@ MonoBehaviour:
   - questionInfo: "\u8ACB\u554F\u6B64\u904A\u6232\u7684\u540D\u5B57\uFF1F"
     options:
     - "\u6210\u5927\u7AAE\u7FC1"
-    - "\u53F0\u5927\u5BCC\u7FC1"
+    - "\u6210\u5927\u4E0D\u5012\u7FC1"
     - "\u6210\u5927\u5BCC\u7FC1"
     correctAns: "\u6210\u5927\u5BCC\u7FC1"
     questionType: 1

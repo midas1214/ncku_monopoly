@@ -18,5 +18,6 @@ public class quitStore : MonoBehaviour, IPointerClickHandler
     {
         shopBox.SetActive(false);
         nowEvent.text = "";
+        RollDice.coroutineAllow = true;
     }
 }
