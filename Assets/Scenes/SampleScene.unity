@@ -508,7 +508,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 1.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!65 &94607346
@@ -537,12 +537,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceSprite:
-  - {fileID: 21300000, guid: 5f406242068c64b0493a30eb15dee324, type: 3}
-  - {fileID: 21300000, guid: 8c952c3acf2624bc1be46e1cc5d758d5, type: 3}
-  - {fileID: 21300000, guid: a313f75892a0245299fc1bd89cb3fbd9, type: 3}
-  - {fileID: 21300000, guid: 06eb0908a8138435680d6efd75dd77c5, type: 3}
-  - {fileID: 21300000, guid: 61b258ec3cd8e432690601c81afbe211, type: 3}
-  - {fileID: 21300000, guid: 2fc07f5e7c5854d1d98274672ade0f18, type: 3}
+  - {fileID: 21300000, guid: f642a181baae2944cabc3d575cdea7ef, type: 3}
+  - {fileID: 21300000, guid: 21fcfdeaba28e2c4c93c7ca594580496, type: 3}
+  - {fileID: 21300000, guid: 71317c0b10e8b164ea5c6e47b53e857f, type: 3}
+  - {fileID: 21300000, guid: ae9dbf11603c86843baf8b17fdfe199b, type: 3}
+  - {fileID: 21300000, guid: ffbe521c0b2f3eb4fbf68c1ad2a06eb6, type: 3}
+  - {fileID: 21300000, guid: 555b7207291915c409be9a335903e08d, type: 3}
   gameControl: {fileID: 979147987}
   player: {fileID: 0}
   ChooseDiceDialogBox: {fileID: 1086864141}
@@ -555,7 +555,7 @@ Transform:
   m_GameObject: {fileID: 94607344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 319, y: -183, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 163.6525}
+  m_LocalScale: {x: 78.8, y: 77.2, z: 163.6525}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1646611803}
