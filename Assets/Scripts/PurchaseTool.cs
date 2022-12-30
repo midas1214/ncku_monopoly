@@ -16,7 +16,7 @@ public class PurchaseTool : MonoBehaviour
 
     [SerializeField] private List<Button> options;
 
-    [SerializeField]
+   [SerializeField]
     private PlayerControl player;
 
     public int cheatCost;
@@ -48,7 +48,6 @@ public class PurchaseTool : MonoBehaviour
             Button localButton = options[i];
             localButton.onClick.AddListener(() => OnClick(localButton));
         }
-
     }
 
     private void OnClick(Button btn)
@@ -64,6 +63,7 @@ public class PurchaseTool : MonoBehaviour
                 info.text = "購買 小雞上工 成功";
                 player.money -= cheatCost;
                 player.cheat++;
+                player.ShowMoneyCreditChange(-cheatCost,"money");
             }
         }
         else if (btn.name == "purchase1")
@@ -78,6 +78,8 @@ public class PurchaseTool : MonoBehaviour
                 info.text = "購買 骰子計數器 成功";
                 player.money -= diceCost;
                 player.diceControl++;
+
+                player.ShowMoneyCreditChange(-diceCost, "money");
             }
 
         }
@@ -97,6 +99,9 @@ public class PurchaseTool : MonoBehaviour
                 info.text = "購買 踏溯台南學分 成功";
                 player.money -= tainanCost;
                 player.tainanCredit++;
+                player.ShowMoneyCreditChange(-tainanCost, "money");
+
+                player.ShowMoneyCreditChange(+10, "credit");
             }
         }
         UpdateState() ;

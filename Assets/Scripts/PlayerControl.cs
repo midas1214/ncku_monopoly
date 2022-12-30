@@ -32,7 +32,9 @@ public class PlayerControl : MonoBehaviour
     public int nowUsingTool = 0;
 
     public static int playerStartPoint = 0;
-    
+
+    [SerializeField]
+    private Color add;
     // Start is called before the first frame update
     void Start()
     {
@@ -151,7 +153,7 @@ public class PlayerControl : MonoBehaviour
             case "money":
                 if (change >= 0)
                 {
-                    changeMoneyText.color = new Color(0, 1, 0.6f); // green
+                    changeMoneyText.color = add;
                     changeMoneyText.text = "+" + change.ToString();
                     StartCoroutine(Delay(changeMoneyText, 3f));
                 }
@@ -165,7 +167,7 @@ public class PlayerControl : MonoBehaviour
             case "credit":
                 if (change >= 0)
                 {
-                    changeCreditText.color = new Color(2, 1, 0.6f);
+                    changeCreditText.color = add;
                     changeCreditText.text = "+" + change.ToString();
                     StartCoroutine(Delay(changeCreditText, 3f));
                 }

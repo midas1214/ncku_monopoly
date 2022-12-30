@@ -22,6 +22,7 @@ public class StartBoxUi : MonoBehaviour
         player.money += 3000;
         player.GetComponent<QuizManager>().UpdateState();
         StartCoroutine(Delay(1.5f));
+        player.ShowMoneyCreditChange(3000, "money");
         
     }
 

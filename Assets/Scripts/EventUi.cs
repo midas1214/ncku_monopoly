@@ -21,7 +21,6 @@ public class EventUi : MonoBehaviour
     {
         this._event= _event;
         eventInfo.text = _event.eventInfo;
-        btn.GetComponentInChildren<TextMeshProUGUI>().text = "確定";
     }
 
     private void OnClick(Button btn)
