@@ -17,7 +17,6 @@ public class CameraZoom : MonoBehaviour , IPointerClickHandler
 
     public float zoomSpeed = 2;
     bool zoom = false;
-    public TextMeshProUGUI text;
     private void Start()
     {
         mainCam = Camera.main;
@@ -30,7 +29,6 @@ public class CameraZoom : MonoBehaviour , IPointerClickHandler
             mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize,3,zoomSpeed);
             cam2.SetActive(true);
             cam1.SetActive(false);
-            text.text = "地圖放大";
             cameraCanvas.worldCamera = farCam;
         }
         else
@@ -38,7 +36,6 @@ public class CameraZoom : MonoBehaviour , IPointerClickHandler
             mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, 1.6f, zoomSpeed);
             cam2.SetActive(false);
             cam1.SetActive(true);
-            text.text = "地圖縮小";
             cameraCanvas.worldCamera = mainCam;
         }
         zoom = !zoom;
