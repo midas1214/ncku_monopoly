@@ -96,11 +96,11 @@ public class PurchaseTool : MonoBehaviour
             }
             else
             {
+                player.playAudioClip(7);
                 info.text = "購買 踏溯台南學分 成功";
                 player.money -= tainanCost;
                 player.tainanCredit++;
                 player.ShowMoneyCreditChange(-tainanCost, "money");
-
                 player.ShowMoneyCreditChange(+10, "credit");
             }
         }

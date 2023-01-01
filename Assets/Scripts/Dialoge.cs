@@ -14,6 +14,7 @@ public class Dialoge : MonoBehaviour
     [SerializeField] private GameObject shopBox;
     [SerializeField] private GameObject selectCardBox;
     [SerializeField] private GameObject startBox;
+    [SerializeField] private GameObject hospitalBox;
 
     [SerializeField]
     private PlayerControl player;
@@ -23,6 +24,7 @@ public class Dialoge : MonoBehaviour
     void Start()
     {
         questionBox.SetActive(false);
+        hospitalBox.SetActive(false);
         eventBox.SetActive(false);
         shopBox.SetActive(false);
         selectCardBox.SetActive(false);
@@ -82,20 +84,21 @@ public class Dialoge : MonoBehaviour
                 selectCardUi.SetCard(2);
                 break;
             case 5:
-                nowEvent.text = "加錢";
+                nowEvent.text = "加油站";
                 selectCardBox.SetActive(true);
                 selectCardUi.SetCard(1);
                 break;
             case 6:
                 nowEvent.text = "成大醫院";
-                resetDialogeBox();
+                hospitalBox.SetActive(true);
+                player.playAudioClip(9);
                 break;
             case 7:
                 nowEvent.text = "起點";
                 startBox.SetActive(true);
                 break;
             case 8:
-                nowEvent.text = "商店";
+                nowEvent.text = "";
                 shopBox.SetActive(true);
                 break;
         }
@@ -108,6 +111,7 @@ public class Dialoge : MonoBehaviour
         shopBox.SetActive(false);
         selectCardBox.SetActive(false);
         startBox.SetActive(false);
+        hospitalBox.SetActive(false);
         RollDice.coroutineAllow = true;
         //Cursor.lockState = CursorLockMode.None;
         nowEvent.text = "";

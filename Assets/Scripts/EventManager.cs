@@ -27,11 +27,27 @@ public class EventManager : MonoBehaviour
         {
             player.money += selectedEvent.val;
             player.ShowMoneyCreditChange(selectedEvent.val, "money");
+            if (selectedEvent.val > 0)
+            {
+                player.playAudioClip(2);
+            }
+            else
+            {
+                player.playAudioClip(3);
+            }
         }
         else
         {
             player.credit += selectedEvent.val;
             player.ShowMoneyCreditChange(selectedEvent.val, "credit");
+            if (selectedEvent.val > 0)
+            {
+                player.playAudioClip(0);
+            }
+            else
+            {
+                player.playAudioClip(1);
+            }
         }
         UpdateState();
     }

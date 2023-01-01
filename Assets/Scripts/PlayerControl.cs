@@ -33,6 +33,11 @@ public class PlayerControl : MonoBehaviour
 
     public static int playerStartPoint = 0;
 
+    // 音效
+    [SerializeField] private List<AudioClip> audioclip;
+    
+    [SerializeField] private AudioSource audioll;
+
     [SerializeField]
     private Color add;
     // Start is called before the first frame update
@@ -146,13 +151,34 @@ public class PlayerControl : MonoBehaviour
         player.GetComponent<MovePlayer>().moveallow = true;
     }
 
+    public void playAudioClip(int type)
+    {
+        audioll.PlayOneShot(audioclip[type]);
+        // 0 : 答對
+        // 1 : 錯誤
+        // 2 : 加錢
+        // 3 : 扣錢
+        // 4 : 挖哭挖哭
+        // 5 : 安尼雅驚訝
+        // 6 : 約兒驚訝
+        // 7 : 約兒讚美
+        // 8 : 洛伊德吃驚
+        // 9 : 安尼雅撒嬌
+        // 10 : 羅伊德好
+        // 11 : 約而讚美2
+        // 12 : 安尼雅 椰
+        // 13 : 
+    }
+
     public void ShowMoneyCreditChange(int change, string type)
     {
+
         switch(type)
         {
             case "money":
                 if (change >= 0)
                 {
+
                     changeMoneyText.color = add;
                     changeMoneyText.text = "+" + change.ToString();
                     StartCoroutine(Delay(changeMoneyText, 3f));
@@ -167,12 +193,14 @@ public class PlayerControl : MonoBehaviour
             case "credit":
                 if (change >= 0)
                 {
+                   
                     changeCreditText.color = add;
                     changeCreditText.text = "+" + change.ToString();
                     StartCoroutine(Delay(changeCreditText, 3f));
                 }
                 else
                 {
+                    
                     changeCreditText.color = Color.red;
                     changeCreditText.text = change.ToString();
                     StartCoroutine(Delay(changeCreditText, 3f));

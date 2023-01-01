@@ -12,6 +12,8 @@ public class selectCardUi : MonoBehaviour
     [SerializeField] public TextMeshProUGUI result;
     [SerializeField] private Dialoge dialogeBox;
     [SerializeField] private PlayerControl player;
+    [SerializeField] private Sprite card;
+    [SerializeField] private List<Sprite> coverCard;
     List<int> resultList;
     private List<int> addMoney = new List<int>() { 1000, 3000, 6000, 0 };
     private List<int> cutMoney = new List<int>() { -1000, -2000, -500, -1500 };
@@ -21,6 +23,7 @@ public class selectCardUi : MonoBehaviour
         for (int i = 0; i < options.Count; i++)
         {
             Button localButton = options[i];
+            localButton.image.sprite = coverCard[i];
             localButton.onClick.AddListener(() => OnClick(localButton));
             options[i].GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
@@ -46,26 +49,30 @@ public class selectCardUi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        result.text = "";
+        result.text = "請選擇一張卡片";
     }
 
     void UpdateState()
     {
         player.moneyText.text = player.money.ToString();
+
     }
 
     private void OnClick(Button btn)
     {
         btn.GetComponentInChildren<TextMeshProUGUI>().text = btn.name;
+        btn.image.sprite = card;
         player.money += Int16.Parse(btn.name);
         player.ShowMoneyCreditChange(Int16.Parse(btn.name), "money");
 
         if (Int16.Parse(btn.name) < 0)
         {
             result.text = "損失 " + btn.name +" 元";
+            player.playAudioClip(8);
         }
         else
         {
+            player.playAudioClip(4);
             result.text = "恭喜獲得 " + btn.name + " 元";
         }
         UpdateState();
@@ -92,6 +99,7 @@ public class selectCardUi : MonoBehaviour
         for (int i = 0; i < options.Count; i++)
         {
             options[i].GetComponentInChildren<TextMeshProUGUI>().text = "";
+            options[i].image.sprite = coverCard[i];
         }
 
     }
