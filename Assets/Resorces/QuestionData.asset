@@ -202,3 +202,66 @@ MonoBehaviour:
     - 'O(nlogn) '
     correctAns: "O(n\xB2)"
     questionType: 3
+  - questionInfo: "\u8ACB\u554F@yumyum_tb\u6C92\u6709\u4ECB\u7D39\u904E\u54EA\u5BB6\u9910\u5EF3?"
+    options:
+    - "\u5C0F\u5317\u5BB6\u7076\u5496"
+    - "\u5C0F\u5B69\u5148\u751F"
+    - "\u718A\u5ABD\u5BB6\u5E38\u83DC "
+    correctAns: "\u5C0F\u5317\u5BB6\u7076\u5496"
+    questionType: 1
+  - questionInfo: "\u9078\u8AB2\u524D\u53EF\u4EE5\u53C3\u8003\u54EA\u4E9B\u7DB2\u7AD9?"
+    options:
+    - PornHub
+    - xvideo
+    - NCKUHub
+    correctAns: NCKUHub
+    questionType: 1
+  - questionInfo: "\u4E0B\u5217\u54EA\u500B\u4E0D\u662F\u6210\u5927\u59CA\u59B9\u6821?"
+    options:
+    - "\u52A0\u62FF\u5927\u591A\u502B\u591A\u5927\u5B78"
+    - "\u82F1\u570B\u528D\u6A4B\u5927\u5B78"
+    - "\u7F8E\u570B\u666E\u6E21\u5927\u5B78"
+    correctAns: "\u82F1\u570B\u528D\u6A4B\u5927\u5B78"
+    questionType: 3
+  - questionInfo: "\u4E0B\u5217\u54EA\u500B\u6642\u6BB5\u7E3D\u5716\u6709\u958B?"
+    options:
+    - "\u9031\u4E098:30-9:00"
+    - "\u9031\u516D8:30-9:00"
+    - "\u9031\u4E9421:30-22:00"
+    correctAns: "\u9031\u4E098:30-9:00"
+    questionType: 2
+  - questionInfo: "\u8ACB\u554F\u6210\u529F\u5927\u5B78\u5B98\u65B9ig\u540D\u7A31\u70BA\u4F55?"
+    options:
+    - ncku_official
+    - yumyum_tb
+    - ncku_csie_food
+    correctAns: ncku_official
+    questionType: 2
+  - questionInfo: "\u8ACB\u554F\u6210\u529F\u5927\u5B78\u8CC7\u8A0A\u7CFB\u5B98\u65B9ig\u540D\u7A31\u70BA\u4F55?"
+    options:
+    - yumyum_tb
+    - ncku_csie
+    - ncku_csie_food
+    correctAns: ncku_csie
+    questionType: 2
+  - questionInfo: "\u8ACB\u554F\u8CC7\u8A0A114\u8AB0\u6700\u9AD8?"
+    options:
+    - "202\u856D\u923A\u84C1"
+    - "\u738B\u7FD4\u8056"
+    - "\u8607\u81F4\u9023"
+    correctAns: "202\u856D\u923A\u84C1"
+    questionType: 1
+  - questionInfo: "\u8ACB\u554F\u4F55\u8005\u4E0D\u662F\u8CC7\u8A0A\u7CFB\u4E3B\u8FA6\u7684\u6D3B\u52D5?"
+    options:
+    - "\u5BBF\u71DF"
+    - "\u59FF\u7469"
+    - "\u6E6F\u5713\u6703"
+    correctAns: "\u59FF\u7469"
+    questionType: 1
+  - questionInfo: "\u8ACB\u554F\u4F55\u8005\u4E0D\u662F\u8CC7\u8A0A\u7CFB\u7DB2\u8DEF\u7528\u8A9E?"
+    options:
+    - "\u55EF\u554A\u554A\u554A\u55EF\u55EF\u554A\u55EF\u554A\u55EF\u554A\u554A"
+    - "\u8ACB\u554F\u6709\u9EDE\u540D\u5BC6\u78BC\u55CE?"
+    - "\u6211\u4E0D\u559D\u9152"
+    correctAns: "\u6211\u4E0D\u559D\u9152"
+    questionType: 1
