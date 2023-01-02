@@ -59,3 +59,20 @@ MonoBehaviour:
       \u5B78\u5206+3"
     val: 3
     eventType: 1
+  - eventInfo: "\u8DE8\u5E74\u591C\u5728\u65B0k\u5EA6\u904E \u5B78\u5206+5"
+    val: 5
+    eventType: 1
+  - eventInfo: "\u96E2\u6563\u62FF\u5230\u9EDE\u540D\u5BC6\u78BC\u5C31\u53BB\u7761\u89BA
+      \u5B78\u5206-3"
+    val: -3
+    eventType: 1
+  - eventInfo: "\u8FFD\u8E64@yumyum_tb\uFF0C\u7206\u5403\u4E00\u6CE2 \u640D\u59311000"
+    val: -1000
+    eventType: 0
+  - eventInfo: "@yumyum_tb 500\u7C89\u62BD\u734E\uFF0C\u62FF\u5230\u661F\u5DF4\u514B\u79AE\u5238
+      \u7372\u5F97500"
+    val: 500
+    eventType: 0
+  - eventInfo: "\u5728\u821E\u6703\u8DDF\u59B9\u5B50\u5587\u57FA\uFF0C\u4F60\u4EC0\u9EBC\u90FD\u6C92\u5F97\u5230\uFF0C\u4F46\u5F88\u723D"
+    val: 0
+    eventType: 0
