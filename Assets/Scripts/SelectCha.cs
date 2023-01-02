@@ -8,10 +8,13 @@ using UnityEngine.SceneManagement;
 public class SelectCha : MonoBehaviour
 {
     public ChaDatabase chaDatabase;
+    public AudioSource Audio;
 
     public TextMeshProUGUI nameText;
 
     public SpriteRenderer spriteRenderer;
+
+    [SerializeField] private List<AudioClip> clip;
 
     private int nowPick=0;
 
@@ -30,6 +33,11 @@ public class SelectCha : MonoBehaviour
 
     }
 
+    void playChaClip(int type)
+    {
+        Audio.PlayOneShot(clip[type]);
+    }
+
     public void nextOption()
     {
         nowPick++;
@@ -37,7 +45,10 @@ public class SelectCha : MonoBehaviour
         {
             nowPick = 0;
         }
+
+        playChaClip(nowPick);
         updateCha(nowPick);
+
         save();
     }
     public void backOption()
@@ -47,6 +58,8 @@ public class SelectCha : MonoBehaviour
         {
             nowPick = chaDatabase.characterCount-1;
         }
+        
+        playChaClip(nowPick);
         updateCha(nowPick);
         save();
     }
