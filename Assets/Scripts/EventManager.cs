@@ -29,7 +29,16 @@ public class EventManager : MonoBehaviour
             player.ShowMoneyCreditChange(selectedEvent.val, "money");
             if (selectedEvent.val > 0)
             {
-                player.playAudioClip(2);
+                int r = Random.Range(0, 2);
+                if (r == 0)
+                {
+                    player.playAudioClip(4);
+                }
+                else
+                {
+                    player.playAudioClip(2);
+                }
+               
             }
             else
             {
@@ -42,7 +51,16 @@ public class EventManager : MonoBehaviour
             player.ShowMoneyCreditChange(selectedEvent.val, "credit");
             if (selectedEvent.val > 0)
             {
-                player.playAudioClip(0);
+                int r = Random.Range(0, 2);
+                if (r == 0)
+                {
+                    player.playAudioClip(0);
+                }
+                else
+                {
+                    player.playAudioClip(12);
+                }
+
             }
             else
             {

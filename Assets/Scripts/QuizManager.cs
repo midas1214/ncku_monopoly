@@ -36,14 +36,36 @@ public class QuizManager : MonoBehaviour
         player.ShowMoneyCreditChange(-3000, "money");
         if (answered == selectedQuestion.correctAns) // yes
         {
-            player.playAudioClip(0);
+            int r = Random.Range(0, 3);
+            if (r == 0)
+            {
+                player.playAudioClip(0);
+            }
+            else if (r==1)
+            {
+                player.playAudioClip(7);
+            }
+            else
+            {
+                player.playAudioClip(10);
+            }
+
             correctAns = true;
             player.credit += 3;
             player.ShowMoneyCreditChange(3, "credit");
         }
         else //no
         {
-            player.playAudioClip(1);
+            int r = Random.Range(0, 2);
+            if (r == 0)
+            {
+                player.playAudioClip(5);
+            }
+            else
+            {
+                player.playAudioClip(1);
+            }
+
         }
         UpdateState();
         return correctAns;

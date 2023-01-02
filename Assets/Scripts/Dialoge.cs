@@ -94,7 +94,7 @@ public class Dialoge : MonoBehaviour
                 player.playAudioClip(9);
                 break;
             case 7:
-                nowEvent.text = "起點";
+                nowEvent.text = "";
                 startBox.SetActive(true);
                 break;
             case 8:

@@ -167,7 +167,7 @@ public class PlayerControl : MonoBehaviour
         // 10 : 羅伊德好
         // 11 : 約而讚美2
         // 12 : 安尼雅 椰
-        // 13 : 
+        // 13 : 收銀
     }
 
     public void ShowMoneyCreditChange(int change, string type)

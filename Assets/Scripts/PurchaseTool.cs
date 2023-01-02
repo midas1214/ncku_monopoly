@@ -63,6 +63,7 @@ public class PurchaseTool : MonoBehaviour
                 info.text = "購買 小雞上工 成功";
                 player.money -= cheatCost;
                 player.cheat++;
+                player.playAudioClip(13);
                 player.ShowMoneyCreditChange(-cheatCost,"money");
             }
         }
@@ -78,7 +79,7 @@ public class PurchaseTool : MonoBehaviour
                 info.text = "購買 骰子計數器 成功";
                 player.money -= diceCost;
                 player.diceControl++;
-
+                player.playAudioClip(13);
                 player.ShowMoneyCreditChange(-diceCost, "money");
             }
 
@@ -99,6 +100,8 @@ public class PurchaseTool : MonoBehaviour
                 player.playAudioClip(7);
                 info.text = "購買 踏溯台南學分 成功";
                 player.money -= tainanCost;
+                player.credit += 10;
+                UpdateState();
                 player.tainanCredit++;
                 player.ShowMoneyCreditChange(-tainanCost, "money");
                 player.ShowMoneyCreditChange(+10, "credit");
