@@ -38,6 +38,10 @@ public class BackpackManager : MonoBehaviour
         pickName.text = "小雞上工";
         info.text = "在答題時使用，將會提示正確答案";
         nowPick = 0;
+        if (player.tainanCredit != 0)
+        {
+            tainan.text = "學分已修得";
+        }
     }
     public void finishUseTool()
     {

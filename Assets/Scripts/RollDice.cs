@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RollDice : MonoBehaviour
 {
@@ -10,15 +11,22 @@ public class RollDice : MonoBehaviour
     public GameObject gameControl;
     public PlayerControl player;
     public GameObject ChooseDiceDialogBox;
+
+    [SerializeField] private Button dice;
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        rend.sprite = diceSprite[5];
+        dice.image.sprite = diceSprite[5];
         player = gameControl.GetComponent<PlayerControl>();
     }
 
-    private void OnMouseDown()
+    void Awake()
+    {
+        dice.onClick.AddListener(() => OnClick(dice)); 
+    }
+
+    private void OnClick(Button btn)
     {
         if (coroutineAllow)
         {
@@ -32,6 +40,7 @@ public class RollDice : MonoBehaviour
             }
         }
     }
+
     public IEnumerator RollTheDice()
     {
         coroutineAllow = false;
@@ -39,13 +48,13 @@ public class RollDice : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             randomSide = Random.Range(0, 6);
-            rend.sprite = diceSprite[randomSide];
+            dice.image.sprite = diceSprite[randomSide];
             yield return new WaitForSeconds(0.05f);
         }
         PlayerControl.diceThrown = randomSide + 1;
         if (player.nowUsingTool == 1 && player.usingTool)
         {
-            rend.sprite = diceSprite[ChooseDiceUi.numberChosen];
+            dice.image.sprite = diceSprite[ChooseDiceUi.numberChosen];
             PlayerControl.diceThrown = ChooseDiceUi.numberChosen + 1;
             player.usingTool = false;
             player.GetComponent<BackpackManager>().finishUseTool();
