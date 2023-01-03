@@ -2104,7 +2104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.099975586, y: -7.4209595}
+  m_AnchoredPosition: {x: -0.099975586, y: -7.42099}
   m_SizeDelta: {x: 0, y: 129.9473}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384090688
@@ -13524,7 +13524,7 @@ MonoBehaviour:
   farCam: {fileID: 1158378557}
   cam1: {fileID: 519420028}
   cam2: {fileID: 1158378555}
-  cameraCanvas: {fileID: 0}
+  cameraCanvas: {fileID: 200519059}
   zoomSpeed: 2
 --- !u!1 &1645826472
 GameObject:
@@ -14629,7 +14629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.4000244, y: -19.355011}
+  m_AnchoredPosition: {x: -6.399994, y: -19.355011}
   m_SizeDelta: {x: -375.79996, y: -211.10999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1809272693
