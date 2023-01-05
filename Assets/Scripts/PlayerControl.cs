@@ -152,7 +152,7 @@ public class PlayerControl : MonoBehaviour
         }
         if ((player.GetComponent<MovePlayer>().waypointIndex == 1) && !player.GetComponent<MovePlayer>().allowPassGo) // shop
         {
-            player.GetComponent<MovePlayer>().allowPassShop = true;
+            player.GetComponent<MovePlayer>().allowPassGo = true;
             player.GetComponent<MovePlayer>().moveallow = false; //停止走路
             playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
             nowEvent = checkEvent(playerStartPoint);
