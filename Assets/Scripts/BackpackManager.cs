@@ -102,7 +102,8 @@ public class BackpackManager : MonoBehaviour
                 player.nowUsingTool = nowPick;
 
                 backpack.SetActive(false); UpdateState();
-            }            
+            }
+            player.GetComponent<PurchaseTool>().UpdateState();
         }
     }
 }

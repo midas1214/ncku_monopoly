@@ -45,7 +45,7 @@ public class SelectCha : MonoBehaviour
         {
             nowPick = 0;
         }
-
+        Audio.Stop();
         playChaClip(nowPick);
         updateCha(nowPick);
 
@@ -58,7 +58,8 @@ public class SelectCha : MonoBehaviour
         {
             nowPick = chaDatabase.characterCount-1;
         }
-        
+
+        Audio.Stop();
         playChaClip(nowPick);
         updateCha(nowPick);
         save();
