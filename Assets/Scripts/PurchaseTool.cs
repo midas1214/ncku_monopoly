@@ -33,7 +33,7 @@ public class PurchaseTool : MonoBehaviour
         UpdateState();
     }
 
-    void UpdateState()
+    public void UpdateState()
     {
         cheatC.text = "目前持有 " + player.cheat.ToString() + " 個";
         diceC.text = "目前持有 " + player.diceControl.ToString() + " 個";
