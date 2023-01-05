@@ -59,6 +59,7 @@ public class PlayerControl : MonoBehaviour
             load();
         }
         updateCha(nowPick);
+        cheat = 0;
         tainanCredit = 0;
         diceControl = 0;
         usingTool = false; // 是否裝備道具

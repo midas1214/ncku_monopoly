@@ -7658,9 +7658,9 @@ MonoBehaviour:
   characterGradeText: {fileID: 1685079457}
   credit: 0
   money: 0
-  cheat: 0
+  cheat: 1
   tainanCredit: 0
-  diceControl: 0
+  diceControl: 2
   usingTool: 0
   nowUsingTool: 0
   lapCount: 1
