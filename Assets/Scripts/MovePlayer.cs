@@ -9,7 +9,8 @@ public class MovePlayer : MonoBehaviour
     [HideInInspector] public int waypointIndex = 0;
     public bool moveallow = false;
     public int nextLap = 0;
-    public bool allowPassShop = true;
+    public bool allowPassShop = true, allowPassGo = true;
+    public Dialoge dialoge; // dialoge 匡中的資訊
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class MovePlayer : MonoBehaviour
             waypointIndex -= waypoints.Length;
             nextLap = 1;
             allowPassShop = false;
+            allowPassGo = false;
         }
         //if (waypointIndex == 25 && !allowPassShop)
         //{
@@ -45,6 +47,11 @@ public class MovePlayer : MonoBehaviour
         {
             waypointIndex++;
         }
+
+    }
+
+    private void PauseMoving()
+    {
 
     }
 }

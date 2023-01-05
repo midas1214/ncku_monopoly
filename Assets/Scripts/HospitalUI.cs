@@ -20,6 +20,7 @@ public class HospitalUI : MonoBehaviour
     {
         player.credit += 10;
         player.ShowMoneyCreditChange(10,"credit");
+        btn.onClick.RemoveAllListeners();
         player.GetComponent<QuizManager>().UpdateState();
 
         StartCoroutine(Delay(1f));
@@ -29,6 +30,7 @@ public class HospitalUI : MonoBehaviour
     {
         yield return new WaitForSeconds(_delay);
 
+        btn.onClick.AddListener(() => OnClick(btn));
         player.GetComponent<Dialoge>().resetDialogeBox();
 
     }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -30,6 +32,7 @@ public class PlayerControl : MonoBehaviour
     public int diceControl =0 ;
     public bool usingTool = false; // 是否裝備道具
     public int nowUsingTool = 0;
+    public int lapCount = 1; // 第幾圈
 
     public static int playerStartPoint = 0;
 
@@ -125,10 +128,13 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (player.GetComponent<MovePlayer>().waypointIndex > playerStartPoint + diceThrown - player.GetComponent<MovePlayer>().nextLap * player.GetComponent<MovePlayer>().waypoints.Length) //走到指定點了
         {
             if (player.GetComponent<MovePlayer>().nextLap == 1) // 過一圈
             {
+                lapCount ++;
+                Debug.Log(lapCount);
                 player.GetComponent<MovePlayer>().nextLap = 0;
             }
             player.GetComponent<MovePlayer>().moveallow = false; //停止走路
@@ -143,6 +149,22 @@ public class PlayerControl : MonoBehaviour
             playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
             nowEvent = checkEvent(playerStartPoint);
             dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
+        }
+        if ((player.GetComponent<MovePlayer>().waypointIndex == 1) && !player.GetComponent<MovePlayer>().allowPassGo) // shop
+        {
+            player.GetComponent<MovePlayer>().allowPassShop = true;
+            player.GetComponent<MovePlayer>().moveallow = false; //停止走路
+            playerStartPoint = player.GetComponent<MovePlayer>().waypointIndex - 1;
+            nowEvent = checkEvent(playerStartPoint);
+            dialoge.GetComponent<Dialoge>().setDialoge(nowEvent);
+        }
+        if (money < 0 || (lapCount == 5 && (credit < 128 || tainanCredit == 0))) // lose 
+        {
+            SceneManager.LoadScene(4);
+        }
+        else if (lapCount == 5 && credit >= 128)
+        {
+            SceneManager.LoadScene(3);
         }
     }
 

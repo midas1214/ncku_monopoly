@@ -11,15 +11,14 @@ public class StartBoxUi : MonoBehaviour
     private PlayerControl player;
 
     void Awake()
-    {
-        
+    { 
         option.onClick.AddListener(() => OnClick(option));
-        
     }
     private void OnClick(Button btn)
     {
         player.money += 3000;
         player.GetComponent<QuizManager>().UpdateState();
+        option.onClick.RemoveAllListeners();
         StartCoroutine(Delay(1.5f));
         player.ShowMoneyCreditChange(3000, "money");
         
@@ -29,7 +28,7 @@ public class StartBoxUi : MonoBehaviour
     {
         yield return new WaitForSeconds(_delay);
 
+        option.onClick.AddListener(() => OnClick(option));
         player.GetComponent<Dialoge>().resetDialogeBox();
-
     }
 }
