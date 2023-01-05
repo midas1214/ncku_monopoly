@@ -22,6 +22,7 @@ public class PlayerControl : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI changeCreditText;
     public TextMeshProUGUI changeMoneyText;
+    public TextMeshProUGUI characterGradeText;
     private int nowPick = 0;  // 選到哪一個角色
 
     // 持有道具數量
@@ -58,7 +59,12 @@ public class PlayerControl : MonoBehaviour
             load();
         }
         updateCha(nowPick);
-    }
+        tainanCredit = 0;
+        diceControl = 0;
+        usingTool = false; // 是否裝備道具
+        nowUsingTool = 0;
+        lapCount = 1; // 第幾圈
+}
     private void updateCha(int select)
     {
         Character character = chaDatabase.GetCharacter(select);
@@ -68,6 +74,7 @@ public class PlayerControl : MonoBehaviour
         money = character.money;
         creditText.text = credit.ToString();
         moneyText.text = money.ToString();
+        characterGradeText.text = "(大一)";
     }
     private void load()
     {
@@ -134,7 +141,30 @@ public class PlayerControl : MonoBehaviour
             if (player.GetComponent<MovePlayer>().nextLap == 1) // 過一圈
             {
                 lapCount ++;
-                Debug.Log(lapCount);
+                if (lapCount == 2)
+                {
+                    characterGradeText.text = "(大二)";
+                }
+                else if (lapCount == 3)
+                {
+                    characterGradeText.text = "(大三)";
+                }
+                else if (lapCount == 4)
+                {
+                    characterGradeText.text = "(大四)";
+                }
+                //switch (lapCount)
+                //{
+                //    case 2:
+                //        characterGradeText.text = "(大二)";
+                //        break;
+                //    case 3:
+                //        characterGradeText.text = "(大三)";
+                //        break;
+                //    case 4:
+                //        characterGradeText.text = "(大四)";
+                //        break;
+                //}
                 player.GetComponent<MovePlayer>().nextLap = 0;
             }
             player.GetComponent<MovePlayer>().moveallow = false; //停止走路
