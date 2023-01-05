@@ -153,18 +153,6 @@ public class PlayerControl : MonoBehaviour
                 {
                     characterGradeText.text = "(大四)";
                 }
-                //switch (lapCount)
-                //{
-                //    case 2:
-                //        characterGradeText.text = "(大二)";
-                //        break;
-                //    case 3:
-                //        characterGradeText.text = "(大三)";
-                //        break;
-                //    case 4:
-                //        characterGradeText.text = "(大四)";
-                //        break;
-                //}
                 player.GetComponent<MovePlayer>().nextLap = 0;
             }
             player.GetComponent<MovePlayer>().moveallow = false; //停止走路
