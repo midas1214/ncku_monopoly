@@ -64,6 +64,7 @@ public class PlayerControl : MonoBehaviour
         usingTool = false; // 是否裝備道具
         nowUsingTool = 0;
         lapCount = 1; // 第幾圈
+        playerStartPoint = 0;
 }
     private void updateCha(int select)
     {

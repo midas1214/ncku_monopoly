@@ -16,6 +16,7 @@ public class RollDice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        coroutineAllow = true;
         rend = GetComponent<SpriteRenderer>();
         dice.image.sprite = diceSprite[5];
         player = gameControl.GetComponent<PlayerControl>();
